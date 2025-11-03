@@ -1,0 +1,10 @@
+header{
+        background-color: rgb(3, 53, 53);
+        padding: 15px;
+        color: rgb(253, 170, 170);
+       }
+       nav a{
+        color: rgb(241, 196, 219);
+        margin: auto;
+        text-decoration: none;
+        margin-left: 15px;}
