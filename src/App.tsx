@@ -1,26 +1,13 @@
-// import "./App.css";
-// import CourseList3 from "./Components/Courselist3";
-
-// function App() {
-//   return (
-//     <>
-//       <CourseList3 />
-//     </>
-//   );
-// }
-
-// export default App;
-import ProductListA from "./Assignments/ProductlistA";
-import ProductListB from "./Assignments/ProductlistB";
+import "./App.css";
+import Counter from "./Assignments/Counter";
 
 function App() {
   return (
-    <div className="container mt-4">
-      <ProductListA />
-      <hr />
-      <ProductListB />
+    <div className="container my-3">
+      <div className="mx-auto">
+        <Counter></Counter>
+      </div>
     </div>
   );
 }
-
 export default App;
