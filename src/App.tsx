@@ -1,10 +1,11 @@
 import "./App.css";
-import EmployeeDirectory from "./Components/EmployeeDirectory";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Productlist from "./Assignments/Productlist";
 
 function App() {
   return (
-    <div className="container my-3">
-      <EmployeeDirectory></EmployeeDirectory>
+    <div>
+      <Productlist></Productlist>
     </div>
   );
 }
