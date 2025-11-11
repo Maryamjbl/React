@@ -9,28 +9,24 @@ function EmployeeTable() {
 
   return (
     <div className="container my-4">
-      <h2 className="text-center text-Danger mb-4">Employee Table</h2>
-      <table className="table table-striped table-bordered">
-        <thead className="table-dark">
+      <h2 className="text-center text-info mb-4">Employee Table</h2>
+      <table className="table table-striped  table-bordered">
+        <tr className="text-success">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Designation</th>
+          <th>Salary</th>
+        </tr>
+        {employees.map((emp) => (
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Department</th>
-            <th>Designation</th>
-            <th>Salary</th>
+            <td>{emp.id}</td>
+            <td>{emp.name}</td>
+            <td>{emp.department}</td>
+            <td>{emp.designation}</td>
+            <td>{emp.salary}</td>
           </tr>
-        </thead>
-        <tbody>
-          {employees.map((emp) => (
-            <tr key={emp.id}>
-              <td>{emp.id}</td>
-              <td>{emp.name}</td>
-              <td>{emp.department}</td>
-              <td>{emp.designation}</td>
-              <td>{emp.salary}</td>
-            </tr>
-          ))}
-        </tbody>
+        ))}
       </table>
     </div>
   );

@@ -1,11 +1,10 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Productlist from "./Assignments/Productlist";
+import Card from "./Assignments/Card";
+
 
 function App() {
   return (
     <div>
-      <Productlist></Productlist>
+      <Card></Card>
     </div>
   );
 }
