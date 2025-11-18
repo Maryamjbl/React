@@ -6,6 +6,7 @@ import Contact from "./Components/Contact";
 import CourseList3 from "./Components/Courselist3";
 import UserList2 from "./Components/Userlist2";
 import UserDetails from "./Components/Userdetails";
+import PostList from "./Components/Postlist";
 function App() {
   return (
     <BrowserRouter>
@@ -51,6 +52,15 @@ function App() {
                   <Link
                     className="nav-link active"
                     aria-current="page"
+                    to="/Posts"
+                  >
+                    Posts
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
                     to="/users"
                   >
                     Users
@@ -75,6 +85,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/courses" element={<CourseList3 />} />
+            <Route path="/post" element={<PostList />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/users" element={<UserList2 />} />
