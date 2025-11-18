@@ -34,7 +34,7 @@ function ProductCard() {
           className="btn btn-primary w-100"
           target="_blank"
         >
-          View Details
+          View Detailsy
         </a>
       </div>
     </div>
