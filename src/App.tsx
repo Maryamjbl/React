@@ -1,12 +1,10 @@
-import React from "react";
-import UserList from "./Components/Userlist";
-
+import React from 'react';
+import Productlist from './Components/Productlist';
 function App() {
   return (
     <div>
-      <UserList />
+      <Productlist/>
     </div>
   );
 }
-
 export default App;
