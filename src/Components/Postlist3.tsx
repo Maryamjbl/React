@@ -28,13 +28,9 @@ const PostList3 = () => {
       setLoading(false); 
     }
   };
-
-
   useEffect(() => {
     fetchPosts();
   }, []);
-
-  
   if (loading == true) {
     return (
       <div className="container text-center">
@@ -42,7 +38,6 @@ const PostList3 = () => {
       </div>
     );
   }
-
    if (error) {
     return (
       <div className="container text-center">
@@ -50,11 +45,9 @@ const PostList3 = () => {
       </div>
     );
   }
- 
   return (
     <div>
       <h1 className="text-danger fw-bold mb-4">Posts</h1>
-
       <div className="row">
         {posts.map((post) => (
           <div className="col-md-3 mb-3" key={post.id}>
