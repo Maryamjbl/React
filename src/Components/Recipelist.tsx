@@ -40,6 +40,15 @@ function RecipeList() {
                   Cuisine: {recipe.cuisine} <br />
                   Cooking Time: {recipe.cookTimeMinutes} mins
                 </p>
+                  <p>
+                <strong>Main Ingredients:</strong>
+                <ul className="mb-0">
+                  {recipe.ingredients.slice(0, 5).map((ing, index) => (
+                    <li key={index}>{ing}</li>
+                  ))}
+                </ul>
+              </p>
+
               </div>
             </div>
           </div>
