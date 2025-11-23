@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
-import CourseList3 from "./Components/Courselist3"
+import CourseList3 from "./Components/Courselist3";
 import UserList2 from "./Components/Userlist2";
 import UserDetails from "./Components/Userdetails";
 import Counter from "./Components/Counter";
 import PostList2 from "./Components/Postlist2";
-
+import RecipeList from "./Components/Recipelist";
 function App() {
   return (
     <Router>
@@ -68,7 +68,12 @@ function App() {
                     Counter
                   </Link>
                 </li>
-              
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/recipe">
+                    Recipes
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -83,6 +88,7 @@ function App() {
             <Route path="/users/:id" element={<UserDetails />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/recipe" element={<RecipeList />} />
           </Routes>
         </main>
       </div>
