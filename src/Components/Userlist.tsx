@@ -13,12 +13,10 @@ type User = {
     name: string;
   };
 };
-
-// Static dummy users (like your postsStatic)
 const usersStatic: User[] = [
   {
     id: 201,
-    name: "John Doe",
+    name: "Sam",
     username: "johnd",
     email: "john@example.com",
     address: { street: "Kulas Light", city: "Gwenborough" },

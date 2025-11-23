@@ -9,6 +9,7 @@ import Counter from "./Components/Counter";
 import PostList2 from "./Components/Postlist2";
 import RecipeList from "./Components/Recipelist";
 import ProductList from "./Components/Productlist";
+import PostList3 from "./Components/Postlist3";
 function App() {
   return (
     <Router>
@@ -81,6 +82,12 @@ function App() {
                     Products
                   </Link>
                 </li>
+
+                 <li className="nav-item">
+                  <Link className="nav-link" to="/error">
+                    Error
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -97,6 +104,7 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/recipe" element={<RecipeList />} />
+              <Route path="/error" element={<PostList3 />} />
           </Routes>
         </main>
       </div>
