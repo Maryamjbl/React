@@ -11,12 +11,15 @@ type Recipe = {
 
 function RecipeList() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
+   const [searchTerm, setSearchTerm] = useState<string>("");
+
 
   const fetchRecipes = async () => {
     let response = await fetch("https://dummyjson.com/recipes");
     let data = await response.json();
     setRecipes(data.recipes); 
   };
+  
 
   useEffect(() => {
     fetchRecipes();

@@ -10,6 +10,9 @@ import PostList2 from "./Components/Postlist2";
 import RecipeList from "./Components/Recipelist";
 import ProductList from "./Components/Productlist";
 import PostList3 from "./Components/Postlist3";
+import RecipeSearch from "./Components/RecipeSearch";
+import RecipeError from "./Assignments/RecipeError";
+import URL from "./Assignments/Url";
 function App() {
   return (
     <Router>
@@ -83,9 +86,27 @@ function App() {
                   </Link>
                 </li>
 
-                 <li className="nav-item">
+                <li className="nav-item">
                   <Link className="nav-link" to="/error">
                     Error
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/search">
+                    RSearch
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/rsearch">
+                    RError
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/usearch">
+                    URLSearch
                   </Link>
                 </li>
               </ul>
@@ -100,11 +121,14 @@ function App() {
             <Route path="/users" element={<UserList2 />} />
             <Route path="/posts" element={<PostList2 />} />
             <Route path="/users/:id" element={<UserDetails />} />
-             <Route path="/products" element={<ProductList />} />
+            <Route path="/products" element={<ProductList />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/recipe" element={<RecipeList />} />
-              <Route path="/error" element={<PostList3 />} />
+            <Route path="/error" element={<PostList3 />} />
+            <Route path="/search" element={<RecipeSearch />} />
+            <Route path="/rsearch" element={<RecipeError/>} />
+            <Route path="/usearch" element={<URL/>} />
           </Routes>
         </main>
       </div>
