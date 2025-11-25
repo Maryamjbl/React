@@ -11,7 +11,7 @@ type User = {
   phone: string;
 };
 
-const UserSearch = () => {
+const UrlSearch = () => {
   const [users, setUser] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -110,4 +110,4 @@ const UserSearch = () => {
   );
 };
 
-export default UserSearch;
+export default UrlSearch;
