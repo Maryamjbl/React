@@ -11,8 +11,12 @@ import RecipeList from "./Components/Recipelist";
 import ProductList from "./Components/Productlist";
 import PostList3 from "./Components/Postlist3";
 import RecipeSearch from "./Components/RecipeSearch";
-import RecipeError from "./Assignments/RecipeError";
+// import RecipeError from "./Assignments/RecipeError";
+import RecipePage from "./Components/Recipepage";
 import URL from "./Assignments/Url";
+import CourseList4 from "./Courselist4";
+import CourseAdd from "./Components/Courseadd";
+import RegisterUser from "./Components/register";
 function App() {
   return (
     <Router>
@@ -69,7 +73,7 @@ function App() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/counter">
+                  <Link className="nav-link" to="/add-course">
                     Counter
                   </Link>
                 </li>
@@ -98,15 +102,27 @@ function App() {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="/rsearch">
                     RError
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <Link className="nav-link" to="/usearch">
                     URLSearch
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/rpage">
+                    RecipePage
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    Register
                   </Link>
                 </li>
               </ul>
@@ -117,7 +133,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<CourseList3 />} />
+            <Route path="/courses3" element={<CourseList3 />} />
             <Route path="/users" element={<UserList2 />} />
             <Route path="/posts" element={<PostList2 />} />
             <Route path="/users/:id" element={<UserDetails />} />
@@ -127,8 +143,12 @@ function App() {
             <Route path="/recipe" element={<RecipeList />} />
             <Route path="/error" element={<PostList3 />} />
             <Route path="/search" element={<RecipeSearch />} />
-            <Route path="/rsearch" element={<RecipeError/>} />
-            <Route path="/usearch" element={<URL/>} />
+            {/* <Route path="/rsearch" element={<RecipeError/>} /> */}
+            <Route path="/rpage" element={<RecipePage />} />
+            <Route path="/usearch" element={<URL />} />
+            <Route path="/courses" element={<CourseList4 />} />
+            <Route path="/add-course" element={<CourseAdd />} />
+            <Route path="/register" element={<RegisterUser />} />
           </Routes>
         </main>
       </div>
