@@ -16,7 +16,8 @@ import RecipePage from "./Components/Recipepage";
 import URL from "./Assignments/Url";
 import CourseList4 from "./Courselist4";
 import CourseAdd from "./Components/Courseadd";
-import RegisterUser from "./Components/register";
+import RegisterUser from "./Components/Register";
+import CourseEdit from "./EditCourse";
 function App() {
   return (
     <Router>
@@ -125,6 +126,12 @@ function App() {
                     Register
                   </Link>
                 </li>
+
+                 <li className="nav-item">
+                  <Link className="nav-link" to="/edit-course/:id">
+                    Edit Course
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -149,6 +156,7 @@ function App() {
             <Route path="/courses" element={<CourseList4 />} />
             <Route path="/add-course" element={<CourseAdd />} />
             <Route path="/register" element={<RegisterUser />} />
+             <Route path="/edit-course/:id" element={<CourseEdit/>} />
           </Routes>
         </main>
       </div>

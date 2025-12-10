@@ -14,7 +14,7 @@ const CourseList4 = () => {
 
   const fetchCourses = async () => {
     const response = await fetch(API_URL);
-    const data = await response.json();
+    const data = await response.json(); 
     setCourses(data);
   };
 
