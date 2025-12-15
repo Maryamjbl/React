@@ -22,6 +22,18 @@ const CourseList4 = () => {
     fetchCourses();
   }, []);
 
+const deleteCourse = async (id: number) => {
+    const isDeleteConfirmed = window.confirm(
+      "Are you sure you want to delete record? "
+    );
+
+    if (isDeleteConfirmed == true) {
+      const deleteUrl = `${API_URL}/${id}`;
+      await fetch(deleteUrl, { method: "DELETE" });
+      fetchCourses();
+    }
+  };
+
   return (
     <div id="container">
       <h1 className="text-danger">Course List</h1>
@@ -52,9 +64,10 @@ const CourseList4 = () => {
                   <i className="bi-pencil-square me-2"></i>Edit
                 </Link>
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-danger"
+                  onClick={() => deleteCourse(course.id)}
                 >
-                  <i className="bi-trash me-3"></i> Delete
+                  <i className="bi-trash me-2"></i> Delete
                 </button>
               </td>
             </tr>
