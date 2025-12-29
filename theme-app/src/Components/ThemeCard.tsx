@@ -1,25 +1,17 @@
 import { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
-import "./ThemeCard.css";
-function ThemeCard() {
-  let context = useContext(ThemeContext);
+
+function ThemedCard() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div
-      className={
-        `card myCard m-4 ` +
-        (context.theme === "dark" ? "text-bg-dark " : "text-bg-light ")
-      }
-    >
+    <div className={`card mb-4 ${theme === "light" ? "text-bg-light" : "text-bg-dark"}`}>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-         The Theme is changed...
-        </p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
-        </a>
+        <h5 className="card-title">Themed Card</h5>
+        <p className="card-text">This card changes based on the theme selected...</p>
       </div>
     </div>
   );
 }
-export default ThemeCard;
+
+export default ThemedCard;
