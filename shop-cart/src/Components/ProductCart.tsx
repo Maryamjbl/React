@@ -25,7 +25,7 @@ const ProductCard = (product: ProductCardProps) => {
         src={product.image}
         className="card-img-top p-3"
         alt={product.title}
-        style={{ height: "250px", objectFit: "contain" }}
+        style={{ height: "300px", objectFit: "contain" }}
       />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{product.title}</h5>
@@ -36,7 +36,7 @@ const ProductCard = (product: ProductCardProps) => {
         <button
           type="button"
           className="btn btn-primary mt-auto"
-          aria-label="Add to cart"
+          aria-label="Add TO Cart"
           onClick={() =>
             cartContext.addToCart({
               id: product.id,

@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCart";
+import ProductCard from "../Components/ProductCart";
 
 const productList = [
   {
@@ -126,7 +126,7 @@ const Products = () => {
   return (
     <div className="container">
       <h2 className="my-4">Our Products</h2>
-      <div className="row g-5">
+      <div className="row g-4">
         {productList.map((product) => (
           <div className="col-md-4" key={product.id}>
             <ProductCard
