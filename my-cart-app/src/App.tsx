@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./Components/Product";
 import { CartProvider } from "./Context/CartContext";
 import Cart from "./Components/Cart";
-import AddressForm from "./Components/AddressForm";
+import AddressForm from "./Components/AddressForm1";
 import OrderPlaced from "./Components/OrderPlaced";
 import Navbar from "./Components/Navbar";
 
