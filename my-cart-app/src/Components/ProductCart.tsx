@@ -25,7 +25,7 @@ const ProductCard = (product: ProductCardProps) => {
         src={product.image}
         className="card-img-top p-3"
         alt={product.title}
-        style={{ height: "300px", objectFit: "contain" }}
+        style={{ height: "250px", objectFit: "contain" }}
       />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{product.title}</h5>

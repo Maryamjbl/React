@@ -8,7 +8,7 @@ const Cart = () => {
     0
   );
   if (cartContext.cart.length === 0)
-    return <div className="alert alert-info mt-4">Your cart is empty, shop now.</div>;
+    return <div className=" mt-4">Your cart is empty, shop now.</div>;
 
   return (
     <div className="container mt-4">
@@ -76,7 +76,7 @@ const Cart = () => {
       </table>
 
       <div className="d-flex justify-content-between align-items-center mt-2">
-        <h5>Total: ${total.toFixed(2)}</h5>
+        <h5>Total:${total.toFixed(2)}</h5>
         <div>
           <Link to="/" className="btn btn-warning me-4">
             Continue Shopping
