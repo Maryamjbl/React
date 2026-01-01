@@ -1,5 +1,4 @@
 import "./App.css";
-import Card from "./Components/Card";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import MainSection from "./Components/MainSection";
