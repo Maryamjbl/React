@@ -18,6 +18,7 @@ import CourseList4 from "./Courselist4";
 import CourseAdd from "./Components/Courseadd";
 import RegisterUser from "./Components/Register";
 import CourseEdit from "./EditCourse";
+import CustomerList from "./Components/Customer";
 function App() {
   return (
     <Router>
@@ -132,6 +133,12 @@ function App() {
                     Edit Course
                   </Link>
                 </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/add-custom">
+                    Customer
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -157,6 +164,7 @@ function App() {
             <Route path="/add-course" element={<CourseAdd />} />
             <Route path="/register" element={<RegisterUser />} />
              <Route path="/edit-course/:id" element={<CourseEdit/>} />
+              <Route path="/add-custom" element={<CustomerList/>} />
           </Routes>
         </main>
       </div>
